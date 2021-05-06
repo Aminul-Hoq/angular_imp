@@ -1,0 +1,31 @@
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+<div class="container"  data-tilt data-tilt-glare="true" data-tilt-scale="1.1">
+  <form class="calculator" name="calc">
+    <input type="text" readonly class="value" name="txt"/>
+    <span class="num clear" (click)="calculator('')">c</span>
+    <span class="num" (click)="calculator('/')">/</span>
+    <span class="num" (click)="calculator('*')">*</span>
+    <span class="num" (click)="calculator('*')">7</span>
+    <span class="num" (click)="calculator('*')">8</span>
+    <span class="num" (click)="calculator('*')">9</span>
+    <span class="num" (click)="calculator('-')">-</span>
+    <span class="num" (click)="calculator('4')">4</span>
+    <span class="num" (click)="calculator('5')">5</span>
+    <span class="num" (click)="calculator('6')">6</span>
+    <span class="num plus" (click)="calculator('+')">+</span>
+    <span class="num" (click)="calculator('1')">1</span>
+    <span class="num" (click)="calculator('2')">2</span>
+    <span class="num" (click)="calculator('3')">3</span>
+    <span class="num" (click)="calculator('0')">0</span>
+    <span class="num" (click)="calculator('00')">00</span>
+    <span class="num" (click)="calculator('.')">.</span>
+    <span class="num equal" (click)="evaluate()">=</span>
+  </form>
+</div>
+<script type="text/javascript" src="assets/vanilla-tilt.js"></script>
+<script type="text/javascript">
+</script>
+</body>

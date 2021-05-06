@@ -1,0 +1,47 @@
+section{
+  position: absolute;
+  margin-top: 150px;
+  left: 25px;
+}
+
+.video-player-wrapper {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.player-list {
+  margin: 0;
+  padding: 0;
+}
+
+.player-list li {
+  list-style: none;
+  padding: 15px 35px;
+  display: block;
+  background: #cccc;
+  cursor: pointer;
+  text-align: left;
+  margin-bottom: 1px;
+}
+
+li.selected {
+  background: #03A9F4 !important;
+}
+
+vg-fullscreen {
+  position: absolute;
+  right: 5px;
+}
+
+vg-playback-button {
+  position: absolute;
+  right: 40px;
+}
+
+vg-controls{
+  padding: 10px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

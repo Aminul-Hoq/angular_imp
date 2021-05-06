@@ -1,0 +1,15 @@
+<body>
+<div class="container">
+  <div class="form-upload">
+    <form>
+      <input type="file" name="file" (change)="onChange($event)">
+      <button type="submit" class="btn-primary" (click)="onSubmit()">
+        Save file
+      </button>
+    </form>
+  </div>
+  <div class="image-view">
+    <img src="{{dto.url}}">
+  </div>
+</div>
+</body>

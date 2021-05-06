@@ -1,0 +1,20 @@
+<body>
+
+<div *ngIf="loader.isLoading | async" class="loader-container">
+  <mat-spinner style="top: 50%; left: 50%"></mat-spinner>
+</div>
+<div>
+  <mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+    *ngFor="let ite of dtoList"
+    [rowspan]="2"
+    [colspan]="1"
+    style="background-color: royalblue">
+      <div class="gallery">
+        <img class="list_image" src="{{ite?.url}}" alt="{{ite.name}}"
+             width="400px">
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+</body>

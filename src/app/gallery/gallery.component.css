@@ -1,0 +1,24 @@
+.loader-container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.8;
+  z-index: 99;
+}
+
+div.table{
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+  align-items: flex-start;
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+}
+
+
+div.table img {
+  width: 80%;
+}

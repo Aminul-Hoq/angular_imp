@@ -1,0 +1,71 @@
+<div class="container first">
+  <div class="item-left">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker touchUi #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="item-right">
+
+    <mat-card class="result">
+      <mat-card-content>
+        <section class="example-section">
+          <mat-slide-toggle
+            class="example-margin"
+            color='{{color}}'
+            checked="{{checked}}"
+            disabled="{{disabled}}">
+            Slide me!
+          </mat-slide-toggle>
+        </section>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+  <div class="item-center">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Number</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+          <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+  </div>
+</div>
+<div class="second container">
+  <div class="item-left">
+    <button class="button-dialog" mat-button (click)="openDialog()">Open dialog</button>
+  </div>
+  <div class="item-right">
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <mat-form-field appearance="fill" [color]="colorControl.value">
+        <mat-label>Font size</mat-label>
+        <input matInput type="number" placeholder="Ex. 12" [formControl]="fontSizeControl" min="10">
+        <span matSuffix>px</span>
+        <mat-error *ngIf="fontSizeControl.invalid">Min size: 10px</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+

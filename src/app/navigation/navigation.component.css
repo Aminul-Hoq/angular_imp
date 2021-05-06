@@ -1,0 +1,52 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  width: 100px;
+}
+
+.logo-text {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  padding: 0;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header li {
+  list-style: none;
+  margin-left: 20px;
+
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 15px 15px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #2b1055;
+}
+
+

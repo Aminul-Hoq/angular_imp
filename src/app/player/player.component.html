@@ -1,0 +1,41 @@
+<!--https://www.positronx.io/angular-video-player-using-ngx-videogular-with-customized-controls-example/-->
+
+<section>
+<div class="video-player-wrapper">
+
+  <vg-player (onPlayerReady)="videoPlayerInit($event)">
+    <vg-overlay-play></vg-overlay-play>
+    <vg-buffering></vg-buffering>
+
+    <vg-scrub-bar>
+      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>
+
+    <vg-controls>
+      <vg-play-pause></vg-play-pause>
+      <vg-playback-button></vg-playback-button>
+
+      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+      <h2 style="margin-top: 15px">/</h2>
+      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+      <vg-mute></vg-mute>
+      <vg-volume></vg-volume>
+      <vg-track-selector></vg-track-selector>
+      <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <video #media [vgMedia]="media" [src]="currentVideo.src" id="singleVideo" preload="auto" crossorigin>
+    </video>
+  </vg-player>
+
+  <ul class="player-list">
+    <li *ngFor="let vdo of videoItems; let $index = index"
+        (click)="startPlaylistVdo(vdo, $index)" [class.selected]="vdo === currentVideo">
+      {{ vdo.name }}
+    </li>
+  </ul>
+
+</div>
+</section>

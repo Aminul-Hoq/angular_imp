@@ -3,8 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
-};
+  production: false,
+  GATEWAY_URL: 'http://localhost:8080',
+  // gateway for hiroku
+  // GATEWAY_URL: 'https://fb-clone-service.herokuapp.com',
+  SERVICE_CONTEXT: '',
+  IS_MODAL_OPEN: false};
 
 /*
  * For easier debugging in development mode, you can import the following file
